@@ -1,0 +1,26 @@
+{
+  "episode": "ep10-agentic-scope",
+  "status": "proposed-storyboard-no-audio",
+  "script_source": "wiki/episodes/ep10.md",
+  "assets": [
+    {"id":"main-character","label":"기존 주인공의 생각·설명·읽기·당황 포즈","type":"character","action":"reuse","source":"video/src/components/ReferenceMascot.tsx","brief":"같은 주인공으로 설명. 승인 기본형을 유지하되 장면에서 필요한 동작이 부족하면 변형 요구를 추가한다."},
+    {"id":"balloons","label":"생각·말풍선","type":"svg","action":"reuse","source":"video/src/components/SvgBalloon.tsx","brief":"짧은 질문만 표시. 머리 앵커 연결과 퇴장 시점 설계."},
+    {"id":"small-props","label":"파일·화살표·작업 창","type":"svg","action":"reuse","source":"video/src/components/RetrospectiveArt.tsx","brief":"의미에 맞는 파일과 작업 창만 사용. 서버·상자 자동 재사용 금지."},
+    {"id":"request-card","label":"막연한 주문에서 구체적인 작업 범위로 바뀌는 카드","type":"svg","action":"adapt","source":"video/src/components/RetrospectiveArt.tsx","brief":"WindowGlyph를 참고하되 ep10 별도 컴포넌트. 시작은 큰 이름만, 끝은 누가/어떤 일/원하는 결과를 표시."},
+    {"id":"sports-moment","label":"골 순간 재현용 작은 도해","type":"svg","action":"create","brief":"공과 골문 중심. 상표·실제 경기 영상 불필요. 느린 재생이 한 순간의 목적이라는 것을 보여준다."},
+    {"id":"conversation-moment","label":"평범한 대화 미니 컷과 중립적 상대 인물","type":"character-scene","action":"create","brief":"주인공과 최소한의 상대 또는 말풍선 왕복. 새 주인공·상사 악역을 만들지 않는다. 실제 대화 인용 아님."},
+    {"id":"editing-timeline","label":"같은 편집 화면의 싱크·속도·장면 구간","type":"svg","action":"create","brief":"정확한 음성 파형처럼 꾸미지 않는 개념 타임라인. 느리게 버튼, 자막 위치 조정, 정상 복귀 상태를 공유."},
+    {"id":"style-options","label":"자막 크기·효과음·개인/팀 기준 선택","type":"svg","action":"adapt","source":"video/src/components/RetrospectiveArt.tsx","brief":"작업 창 안에 간단한 크기/효과 옵션. 서로 다른 설정을 정답/오답으로 표현하지 않는다."},
+    {"id":"review-loop","label":"출력→사람 검토→수정 경로","type":"svg-motion","action":"adapt","source":"video/src/components/RetrospectiveArt.tsx","brief":"기존 파일과 화살표를 연결하고 되돌아가는 동작 추가. 실제 측정하지 않은 시간·비율은 표시하지 않는다."}
+  ],
+  "scenes": [
+    {"id":"01-vague-request","meaning":"넓은 이름만으로는 맡길 업무를 알 수 없음","asset_ids":["main-character","balloons","request-card"]},
+    {"id":"02-working-view","meaning":"사람의 어떤 작업과 판단을 맡길지 정의","asset_ids":["main-character","request-card","small-props"]},
+    {"id":"03-same-button","meaning":"같은 효과도 해당 순간의 목적에 따라 결과가 달라짐","asset_ids":["main-character","sports-moment","conversation-moment","editing-timeline"]},
+    {"id":"04-different-criteria","meaning":"공통 처리, 전문성과 취향, 장면 맥락을 구분","asset_ids":["main-character","editing-timeline","style-options"]},
+    {"id":"05-review-cost","meaning":"자동 출력 뒤의 사람 검토·수정 비용","asset_ids":["main-character","small-props","review-loop"]},
+    {"id":"06-shared-criteria","meaning":"공용화 전에 개인 설정과 팀 기준을 정리","asset_ids":["main-character","request-card","style-options"]},
+    {"id":"07-small-scope","meaning":"실제 쓰이는 작은 자동화부터 축적","asset_ids":["main-character","editing-timeline","small-props"]},
+    {"id":"08-close","meaning":"처음 주문을 구체적인 업무 질문으로 바꾸기","asset_ids":["main-character","request-card"]}
+  ]
+}

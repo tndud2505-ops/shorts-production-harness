@@ -4,6 +4,8 @@
 
 ## 공개 저장소에서 시작
 
+기획 중인 새 영상은 먼저 `episodes/<id>/scene-plan.json`에 필요한 자산을 분류하고 `node scripts/scene-assets.mjs --episode <id>`로 확인할 수 있습니다. 이 읽기 전용 명령은 Node만 필요하고 TTS/Remotion 런타임 없이 동작합니다. 새 자산을 자동 생성하거나 그림의 의미를 판정하지는 않습니다. 아래 영상 출력 명령은 해당 에피소드의 구현과 런타임이 준비된 뒤 사용합니다.
+
 ```sh
 npm ci --prefix video
 cd video

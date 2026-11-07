@@ -5,6 +5,7 @@
 | 방식 ID | 성격 | 사용 사례 | 구현 | 상태 |
 |---|---|---|---|---|
 | `illustrated-developer-story` | SVG 인물·소품, 문장 단위 등장, 검정/아이보리 구성 | [ep08](episodes/ep08.md) | [Remotion 패턴](patterns/illustrated-developer-story.md) | 실행 가능, 장면 대응 개선 대기 |
+| `png-illustrated-story` | 생성 PNG 포즈·소품, 문장별 레이어 전환, 짧은 리액션 | [ep09](episodes/ep09.md) | [PNG 패턴](patterns/png-illustrated-story.md) | EP09 구현, 선택 음성으로 출력 |
 
 다른 전환 방식·실사·화면 녹화·생성 영상·다른 엔진을 택할 수 있습니다. 아직 분석하거나 구현하지 않은 방식은 지원한다고 표시하지 않습니다.
 

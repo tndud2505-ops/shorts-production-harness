@@ -1,0 +1,159 @@
+{
+  "episode": "ep09-ai-collaboration",
+  "status": "implemented-and-rendered-v2",
+  "pattern": "PNG illustration layers + sentence-cue layout + short reaction inserts",
+  "assets": [
+    {
+      "id": "protagonist-mascot",
+      "label": "Dot PNG 주인공",
+      "action": "reuse",
+      "source": "video/public/png/dot-manifest.json",
+      "brief": "Dot v10 원본9포즈를 그대로 재사용. 기본포즈만 별도 v10r 재생성 PNG. 고정 입모양이며 레이어 이동과 포즈 전환."
+    },
+    {
+      "id": "automotive-car",
+      "label": "자동차 PNG",
+      "action": "reuse",
+      "source": "video/public/png/props/dot-v10r/props-atlas.png",
+      "brief": "Dot v10r 자동차 PNG 셀을 CSS로 정확히 클리핑. 실제 장비 사진이 아니라 자동차 SW 개발자 소개용 개념 그림."
+    },
+    {
+      "id": "retrospective-glyphs",
+      "label": "파일·장비 창 PNG와 연결선",
+      "action": "reuse",
+      "source": "video/public/png/props/dot-v10r/props-atlas.png",
+      "brief": "파일과 창 그림은 PNG 아틀라스. 글자·화살표·연결선은 편집 가능한 코드 레이어. 이전 벡터 말풍선은 사용하지 않음."
+    },
+    {
+      "id": "colleague-mascot",
+      "label": "동료 역할의 동일 계열 PNG 캐릭터",
+      "action": "reuse",
+      "source": "video/public/png/dot-manifest.json",
+      "brief": "동일한 생성 캐릭터의 neutral/thinking/typing/hope/explaining 포즈를 동료 역할로 재사용. 화면 좌우와 주는/받는 사람 설명으로 구분. 이전 안경 SVG 동료는 사용하지 않음."
+    },
+    {
+      "id": "collab-blocks",
+      "label": "자동화 단계·검증 흐름",
+      "action": "reuse",
+      "source": "video/public/png/props/dot-v10r/props-atlas.png",
+      "brief": "연결된 노드 PNG로 자동화 단계를 표현하고 실제 문장 구간에 시험→문제 확인→수정→재시험을 표시. 90%, 검토3배, 협업0% 등 근거 없는 측정 수치 없음."
+    },
+    {
+      "id": "dopamine-memes",
+      "label": "짧은 리액션 PNG",
+      "action": "reuse",
+      "source": "video/public/png/reactions/ep09/meme-raw-dump.png",
+      "brief": "기존 생성 PNG3종을 의미가 맞는 지점에 최대2.4초 표시. 주인공은 계속 화면에 유지."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "intro-ai-collab",
+      "asset_ids": [
+        "protagonist-mascot",
+        "automotive-car",
+        "collab-blocks",
+        "retrospective-glyphs",
+        "colleague-mascot"
+      ]
+    },
+    {
+      "id": "thesis-attitude",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks"
+      ]
+    },
+    {
+      "id": "giver-raw-dump",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks",
+        "retrospective-glyphs"
+      ]
+    },
+    {
+      "id": "giver-pain-point",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "retrospective-glyphs",
+        "collab-blocks",
+        "dopamine-memes"
+      ]
+    },
+    {
+      "id": "giver-human-touch",
+      "asset_ids": [
+        "protagonist-mascot",
+        "retrospective-glyphs",
+        "collab-blocks"
+      ]
+    },
+    {
+      "id": "receiver-bias",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks",
+        "retrospective-glyphs"
+      ]
+    },
+    {
+      "id": "receiver-argue-point",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "retrospective-glyphs",
+        "collab-blocks",
+        "dopamine-memes"
+      ]
+    },
+    {
+      "id": "silo-giveup",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "retrospective-glyphs"
+      ]
+    },
+    {
+      "id": "company-graveyard-point",
+      "asset_ids": [
+        "protagonist-mascot",
+        "collab-blocks",
+        "dopamine-memes"
+      ]
+    },
+    {
+      "id": "receiver-adopt",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks",
+        "automotive-car",
+        "retrospective-glyphs"
+      ]
+    },
+    {
+      "id": "collab-balance",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks"
+      ]
+    },
+    {
+      "id": "outro-reflection",
+      "asset_ids": [
+        "protagonist-mascot",
+        "colleague-mascot",
+        "collab-blocks",
+        "automotive-car",
+        "retrospective-glyphs"
+      ]
+    }
+  ]
+}

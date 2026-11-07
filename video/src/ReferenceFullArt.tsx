@@ -6,6 +6,9 @@ import { AutomotiveCar } from "./components/AutomotiveCar";
 import { ReferenceMascot, REFERENCE_MASCOT_HEAD } from "./components/ReferenceMascot";
 import { SvgBalloon } from "./components/SvgBalloon";
 import {
+  AgentSkillBlock, ArtifactStateCard, ColleagueMascot, DopamineMemeCard,
+} from "./components/CollaborationArt";
+import {
   Arrow, ChartSketch, Drawing, FileGlyph, GraphSketch, Label,
   Parcel, ParentFigure, ServerRack, Sticker, SvgText, WindowGlyph, beat, clamp,
 } from "./components/RetrospectiveArt";
@@ -447,6 +450,285 @@ export const ReferenceFullArt: React.FC<Props> = (props) => {
         <Heading y={560} size={37}>{i === 0 ? "유지비까지 처음부터" : "직접 쓰며, 계속 고치기"}</Heading>
       </div>;
       break;
+    case "intro-ai-collab": {
+      pose = i === 0 ? "typing" : i < 3 ? "explaining" : "thinking";
+      if (i === 0) {
+        actor = { x: 65, y: 520, width: 390 };
+        art = <>
+          <Heading>자동차 SW 개발자</Heading>
+          <Drawing x={0} y={0} width={880} height={1050} label="노트북과 자동차 제어기를 잇는 연결선">
+            <path d="M344 835 C379 835 395 838 456 841" fill="none" stroke="#7b9288" strokeWidth={2.6} opacity={r(0, .12, .4)} />
+          </Drawing>
+          <div style={{ position: "absolute", left: 450, top: 620 }}>
+            <AutomotiveCar width={380} progress={r(0, .12, .65)} />
+          </div>
+        </>;
+      } else if (i < 3) {
+        art = <>
+          <Heading size={39}>{i === 1 ? "회사에서도 일상이 된 AI" : "에이전트 · MCP · 스킬 · 코드 리뷰"}</Heading>
+          <AgentSkillBlock x={65} y={195} width={225} label="AGENT" sublabel="자동화 에이전트" active opacity={r(1, .05)} />
+          <AgentSkillBlock x={327} y={195} width={225} label="MCP" sublabel="사내 도구 연결" active opacity={r(1, .18)} />
+          <AgentSkillBlock x={590} y={195} width={225} label="SKILL" sublabel="반복 업무 규칙" active opacity={r(1, .3)} />
+          {i >= 2 && <>
+            <WindowGlyph x={135} y={405} width={265} label="코드 리뷰" active opacity={r(2, .08)} />
+            <WindowGlyph x={480} y={405} width={265} label="구조 변경" active opacity={r(2, .22)} />
+          </>}
+        </>;
+      } else {
+        actor = { x: 85, y: 690, width: 310 };
+        art = <>
+          <Heading size={38}>도구는 빨라졌는데 협업은 왜 삐걱거릴까?</Heading>
+          <AgentSkillBlock x={325} y={225} width={230} label="AI 산출물" sublabel="충돌 발생" broken opacity={r(3, .08)} />
+          <Drawing x={250} y={385} width={380} height={190} label="엇갈리는 협업 화살표">
+            <path d="M40 55 L340 55 M315 35 L340 55 L315 75" stroke={ART.rust} strokeWidth={4.5} />
+            <path d="M340 125 L40 125 M65 105 L40 125 L65 145" stroke={ART.rust} strokeWidth={4.5} />
+            <SvgText x={190} y={102} size={34} weight={700} color={ART.rust}>⚡</SvgText>
+          </Drawing>
+          <ColleagueMascot pose="skeptical" width={310} frame={frame} flip style={{ position: "absolute", left: 495, top: 690 }} />
+        </>;
+      }
+      break;
+    }
+    case "thesis-attitude": {
+      pose = i === 0 ? "explaining" : "thinking";
+      actor = { x: 85, y: 700, width: 300 };
+      art = <>
+        <Heading size={40}>{i === 0 ? "AI 모델 성능 문제가 아니었다" : "주는 태도 vs 받는 태도의 엇갈림"}</Heading>
+        <ArtifactStateCard
+          x={65}
+          y={195}
+          width={345}
+          verified={false}
+          title="주는 사람"
+          lines={["AI 날것 그대로 전달", "직접 실행·검토 생략", "수고를 남에게 전가"]}
+          opacity={r(0, .1)}
+        />
+        <ArtifactStateCard
+          x={470}
+          y={195}
+          width={345}
+          verified={false}
+          title="받는 사람"
+          lines={["그냥 AI 치면 되잖아?", "트집 잡기와 말싸움", "내가 만들고 말지"]}
+          opacity={i >= 1 ? r(1, .08) : 0.25}
+        />
+        <ColleagueMascot pose="skeptical" width={300} frame={frame} flip style={{ position: "absolute", left: 500, top: 700 }} />
+      </>;
+      break;
+    }
+    case "giver-raw-dump": {
+      pose = i === 0 ? "explaining" : "surprised";
+      actor = { x: 500, y: 695, width: 310 };
+      art = <>
+        <Heading size={38}>차량 제어 모듈 구조 변경 · 대규모 코드 리뷰</Heading>
+        <ColleagueMascot pose="dumping" width={310} frame={frame} style={{ position: "absolute", left: 65, top: 695 }} />
+        <ArtifactStateCard
+          x={255}
+          y={190}
+          width={370}
+          verified={false}
+          title="AI 초안 (직접 실행 0회)"
+          lines={["제어기 빌드 확인 안 함", "핀·타이밍 예외 미검토", "그럴듯한 문서만 수십 장"]}
+          opacity={r(i >= 1 ? 1 : 0, .08)}
+        />
+        <Arrow x={395} y={535} width={95} progress={r(i >= 1 ? 1 : 0, .2)} color={ART.rust} />
+        <Label x={250} y={585} width={380} size={31} style={{ textAlign: "center", fontWeight: 700, color: ART.rust }}>
+          돌려보지도 않고 그대로 투척
+        </Label>
+      </>;
+      break;
+    }
+    case "giver-pain-point": {
+      pose = "disappointed";
+      actor = { x: 280, y: 715, width: 310 };
+      const showMeme = i >= 1 ? beat(c.local, 0.25, 0.55) : 0;
+      art = <>
+        <Heading size={38}>실제 제어기 환경에서 돌려보면 에러 투성이</Heading>
+        <div style={{ position: "absolute", left: 75, top: 225, opacity: Math.max(0, 1 - showMeme * 1.2) }}>
+          <AutomotiveCar width={340} progress={1} />
+        </div>
+        <AgentSkillBlock x={465} y={205} width={330} label="BUILD FAIL" sublabel="실제 제어기 동작 불가" broken opacity={Math.max(0, 1 - showMeme * 1.2)} />
+        <AgentSkillBlock x={465} y={405} width={330} label="검토 수고 떠넘김" sublabel="받은 사람이 처음부터 디버깅" broken opacity={Math.max(0, 1 - showMeme * 1.2)} />
+        <DopamineMemeCard
+          image="png/reactions/ep09/meme-raw-dump.png"
+          topText="AI 초안 복붙해서 리뷰 요청!"
+          bottomLeftText="결과는?"
+          bottomRightText="'검토 시간 3배'"
+          progress={showMeme}
+        />
+      </>;
+      break;
+    }
+    case "giver-human-touch": {
+      pose = "typing";
+      actor = { x: 280, y: 705, width: 320 };
+      art = <>
+        <Heading size={39}>직접 돌려보고 고친 '사람의 손'이 들어가야 한다</Heading>
+        <FileGlyph x={75} y={250} width={165} label="AI 초안" opacity={r(0, .05)} />
+        <Arrow x={265} y={325} width={90} progress={r(0, .18)} color={ART.teal} />
+        <ArtifactStateCard
+          x={380}
+          y={185}
+          width={430}
+          verified
+          title="사람의 손으로 검증한 산출물"
+          lines={["직접 빌드하며 안 되는 부분 수정", "실제 제어기 조건으로 교차 검증", "동료가 바로 이어서 쓸 수 있게 정리"]}
+          opacity={r(0, .28)}
+        />
+      </>;
+      break;
+    }
+    case "receiver-bias": {
+      pose = "hope";
+      actor = { x: 95, y: 695, width: 310 };
+      art = <>
+        <Heading size={38}>동료가 직접 부딪히며 만들어 온 에이전트 · MCP · 스킬</Heading>
+        <AgentSkillBlock x={110} y={220} width={295} label="사내 MCP · SKILL" sublabel="반복 업무 자동화" active opacity={r(0, .1)} />
+        <Arrow x={425} y={295} width={90} progress={r(i >= 1 ? 1 : 0, .15)} color={ART.teal} />
+        <WindowGlyph x={535} y={215} width={250} label="팀 공용 툴" active opacity={r(i >= 1 ? 1 : 0, .25)} />
+        <Label x={140} y={470} width={600} size={33} style={{ textAlign: "center", fontWeight: 700, color: ART.teal }}>
+          직접 삽질하며 안 되는 부분까지 다듬어 온 도구
+        </Label>
+        <ColleagueMascot pose="skeptical" width={310} frame={frame} flip style={{ position: "absolute", left: 490, top: 695 }} />
+      </>;
+      break;
+    }
+    case "receiver-argue-point": {
+      pose = "disappointed";
+      actor = { x: 95, y: 705, width: 300 };
+      const showMeme = i >= 1 ? beat(c.local, 0.2, 0.5) : 0;
+      art = <>
+        <Heading size={38}>활용할 생각보다 깎아내리기와 트집 잡기</Heading>
+        <div style={{ opacity: Math.max(0, 1 - showMeme * 1.2) }}>
+          <SvgBalloon
+            kind="shout"
+            x={160}
+            y={175}
+            width={620}
+            size={34}
+            text={"이거 그냥 AI한테\n물어보면 되는 거 아냐?!"}
+            tailTarget={{ x: 610, y: 710 }}
+          />
+          <AgentSkillBlock x={240} y={485} width={400} label="사소한 예외 1건으로 전체 부정" sublabel="도와주기보다 안 되는 이유만 논쟁" broken />
+        </div>
+        <ColleagueMascot pose="skeptical" width={300} frame={frame} flip style={{ position: "absolute", left: 500, top: 705 }} />
+        <DopamineMemeCard
+          image="png/reactions/ep09/meme-just-prompt.png"
+          topText="주말 내내 깎아온 MCP·스킬 공유!"
+          bottomLeftText="반응은?"
+          bottomRightText="'그냥 AI 치면 되잖아?'"
+          progress={showMeme}
+        />
+      </>;
+      break;
+    }
+    case "silo-giveup": {
+      pose = "typing";
+      actor = { x: 65, y: 695, width: 300 };
+      art = <>
+        <Heading size={39}>"남이 만든 툴 맞출 시간에 내가 만들고 말지"</Heading>
+        <Drawing x={0} y={160} width={880} height={820} label="두 개발자를 가르는 각자도생 칸막이">
+          <path d="M440 30 V800" stroke={ART.rust} strokeWidth={6} strokeDasharray="18 14" />
+        </Drawing>
+        <WindowGlyph x={75} y={230} width={290} label="내 툴 따로 제작" active={false} />
+        <WindowGlyph x={515} y={230} width={290} label="내 프롬프트 따로 제작" active={false} />
+        <SvgBalloon
+          kind="thought"
+          x={445}
+          y={425}
+          width={390}
+          size={30}
+          text={"그냥 내가 새로\n만들고 말지..."}
+          tailTarget={{ x: 635, y: 710 }}
+          opacity={r(i >= 1 ? 1 : 0, .1)}
+        />
+        <ColleagueMascot pose="silo" width={300} frame={frame} flip style={{ position: "absolute", left: 515, top: 695 }} />
+      </>;
+      break;
+    }
+    case "company-graveyard-point": {
+      pose = "thinking";
+      actor = { x: 280, y: 715, width: 310 };
+      const showMeme = i >= 1 ? beat(c.local, 0.2, 0.5) : 0;
+      art = <>
+        <Heading size={38}>회사에서 좋은 에이전트나 툴이 퍼지지 않는 이유</Heading>
+        <div style={{ opacity: Math.max(0, 1 - showMeme * 1.2) }}>
+          <AgentSkillBlock x={75} y={210} width={330} label="A의 에이전트 (방치)" sublabel="혼자만 쓰다 중단" broken />
+          <AgentSkillBlock x={475} y={210} width={330} label="B의 MCP (중복)" sublabel="같은 기능 또 개발" broken />
+          <AgentSkillBlock x={75} y={425} width={330} label="C의 스킬 (비공개)" sublabel="피드백 지쳐서 닫음" broken />
+          <AgentSkillBlock x={475} y={425} width={330} label="D의 스크립트 (각자도생)" sublabel="팀 시너지 0%" broken />
+        </div>
+        <DopamineMemeCard
+          image="png/reactions/ep09/meme-tool-graveyard.png"
+          topText="팀원 5명이 각자 AI 툴 제작!"
+          bottomLeftText="결과는?"
+          bottomRightText="'협업 0% 각자도생'"
+          progress={showMeme}
+        />
+      </>;
+      break;
+    }
+    case "receiver-adopt": {
+      pose = "explaining";
+      actor = { x: 80, y: 695, width: 305 };
+      art = <>
+        <Heading size={37}>"내 업무 어디에 붙이면 잘 써먹을까?"부터 보기</Heading>
+        <AgentSkillBlock x={255} y={195} width={370} label="검증된 MCP · SKILL" sublabel="동료가 다듬어 온 산출물" active opacity={r(0, .08)} />
+        <Arrow x={426} y={395} down width={70} progress={r(0, .25)} color={ART.teal} />
+        <div style={{ position: "absolute", left: 265, top: 475 }}>
+          <AutomotiveCar width={350} progress={r(0, .35, .6)} />
+        </div>
+        {i >= 1 && (
+          <Label x={140} y={635} width={600} size={31} style={{ textAlign: "center", fontWeight: 700, color: ART.teal }}>
+            부족한 한두 가지는 함께 고쳐서 팀 자산으로 키우기
+          </Label>
+        )}
+        <ColleagueMascot pose="collaborating" width={305} frame={frame} flip style={{ position: "absolute", left: 495, top: 695 }} />
+      </>;
+      break;
+    }
+    case "collab-balance": {
+      pose = "hope";
+      actor = { x: 85, y: 700, width: 300 };
+      art = <>
+        <Heading size={40}>AI 시대 협업의 두 가지 핵심 태도</Heading>
+        <ArtifactStateCard
+          x={60}
+          y={200}
+          width={355}
+          verified
+          title="주는 사람"
+          lines={["직접 돌려보며 오류 수정", "사람의 손길과 검증 반영", "동료가 믿고 쓸 상태로 전달"]}
+          opacity={r(0, .1)}
+        />
+        <ArtifactStateCard
+          x={465}
+          y={200}
+          width={355}
+          verified
+          title="받는 사람"
+          lines={["편협한 기싸움·트집 내려놓기", "만들어진 산출물 적극 활용", "부족한 점은 함께 개선"]}
+          opacity={r(i >= 1 ? 1 : 0, .2)}
+        />
+        <ColleagueMascot pose="collaborating" width={300} frame={frame} flip style={{ position: "absolute", left: 495, top: 700 }} />
+      </>;
+      break;
+    }
+    case "outro-reflection": {
+      pose = "celebrating";
+      actor = { x: 110, y: 685, width: 310 };
+      art = <>
+        <Heading size={38}>새 도구 도입보다 먼저 돌아봐야 할 우리 팀의 태도</Heading>
+        <AgentSkillBlock x={95} y={220} width={220} label="사람의 손길" sublabel="직접 검증" active />
+        <Arrow x={335} y={275} width={75} progress={r(0, .15)} color={ART.teal} />
+        <AgentSkillBlock x={430} y={220} width={220} label="적극적 활용" sublabel="열린 협업" active />
+        <div style={{ position: "absolute", left: 265, top: 445 }}>
+          <AutomotiveCar width={350} progress={r(0, .2, .65)} />
+        </div>
+        <ColleagueMascot pose="collaborating" width={310} frame={frame} flip style={{ position: "absolute", left: 465, top: 685 }} />
+      </>;
+      break;
+    }
     default:
       pose = "thinking";
       art = null;

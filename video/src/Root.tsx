@@ -4,12 +4,21 @@ import { ReferencePoseSheet } from "./ReferencePoseSheet";
 import { BalloonTypeSheet } from "./BalloonTypeSheet";
 import { SvgInventorySheet, SvgInventoryProps } from "./SvgInventorySheet";
 import { CleanRetrospectiveFilm } from "./CleanRetrospectiveFilm";
+import { PngCollaborationFilm } from "./png/PngCollaborationFilm";
+import collaborationPreview from "../../episodes/ep09-ai-collaboration/runtime.preview.json";
 import preview from "../../episodes/ep08-full-reference/runtime.preview.json";
 import { EpisodeProps, timelineFor } from "./episode";
 const previewProps = preview as EpisodeProps;
 
 // A registered implementation pattern, not a constraint on future videos.
 export const RemotionRoot: React.FC = () => <>
+  <Composition id="PngCollaborationFilm" component={PngCollaborationFilm}
+    defaultProps={collaborationPreview as EpisodeProps} fps={30} width={1080} height={1920}
+    durationInFrames={timelineFor(collaborationPreview as EpisodeProps).totalFrames}
+    calculateMetadata={({props}: {props:EpisodeProps})=>{
+      const t=timelineFor(props);
+      return {fps:t.episode.fps,width:t.episode.width,height:t.episode.height,durationInFrames:t.totalFrames};
+    }}/>
   <Composition id="ReferencePoseSheet" component={ReferencePoseSheet} fps={30} width={1600} height={850} durationInFrames={120}/>
   <Composition id="BalloonTypeSheet" component={BalloonTypeSheet} fps={30} width={1280} height={850} durationInFrames={1}/>
   <Composition id="SvgInventorySheet" component={SvgInventorySheet} defaultProps={{group:"mascot"} as SvgInventoryProps} fps={30} width={1600} height={1040} durationInFrames={1}/>

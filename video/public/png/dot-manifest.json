@@ -1,0 +1,60 @@
+{
+  "assets": [
+    {
+      "file": "png/characters/dot-v10/celebrating.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "052f5c36cd70e4a36c604b07ee20532422cb5c1a9f208d1d6dcec046461a215b"
+    },
+    {
+      "file": "png/characters/dot-v10/disappointed.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "070c7b618f904d3f66d37ff86a5d9153cbefd12f889f045c088c8d5136d48877"
+    },
+    {
+      "file": "png/characters/dot-v10/explaining.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "6ecebe9ad69414994e692aa983834e132f8666be25c62f679990fc15ba3c27c0"
+    },
+    {
+      "file": "png/characters/dot-v10/hope.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "0d5d52341b4fe666f31857c2dd0d8855c44a9156dab18a2f21645d1433b1351f"
+    },
+    {
+      "file": "png/characters/dot-v10/phone.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "5244b2382d4ac8474c1313662feb4c94a324a8b03f5e14e0dec2548f0db7062e"
+    },
+    {
+      "file": "png/characters/dot-v10/reading.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "f867d23b7995a7661ee5c3230b83924ec0c39a3607c35dd0f08235a6a07573c7"
+    },
+    {
+      "file": "png/characters/dot-v10/surprised.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "b19b3a6284d79b72713fc0f54649064a94abebf60aacc6b0ed3abdde95c2c79c"
+    },
+    {
+      "file": "png/characters/dot-v10/thinking.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "32fa6894217920ac9579653522db430e5eb50d2fe04f7108da61f550f139696d"
+    },
+    {
+      "file": "png/characters/dot-v10/typing.png",
+      "origin": "Dot v10 recovered original PNG",
+      "sha256": "517b88e4ffd67d1adf2b48dbbc70248c5595cc23a0fc87a7b1bdcdb4281434ac"
+    },
+    {
+      "file": "png/characters/dot-v10r/neutral.png",
+      "origin": "Dot v10r reconstructed PNG, used in EP09; not original v10",
+      "sha256": "f2483642a59ac96be2a71a1141f3bc76b1fdfcc52a125821db7e5e7e87f00bcd"
+    },
+    {
+      "file": "png/props/dot-v10r/props-atlas.png",
+      "origin": "Dot v10r reconstructed PNG, used in EP09; not original v10",
+      "sha256": "24fc64b64e7e16e6f1885ed9b31a8913555af1a734673ca171819e8359bbab2c"
+    }
+  ],
+  "note": "Original nine poses preserved byte-for-byte. Regenerated neutral and props separately labeled v10r. EP09 composition is new; EP08 output reuses original v10 video."
+}

@@ -11,6 +11,10 @@ Confirm the intended message before editing story order, spoken wording and scen
 
 Choose the production method after reference and story analysis. Reuse or extend the existing method when it fits; a new reference may call for different transitions, media or tools. Record a new pattern instead of turning ep08's style into a universal requirement.
 
+During scene design, identify required characters/poses, props, diagrams, balloons and actions from the sentence's meaning. Compare with actual library sources; classify each asset as reuse, adapt or create in `episodes/<id>/scene-plan.json`, with scene IDs and a concrete brief. Run `node scripts/scene-assets.mjs --episode <id>` for the inventory report when a plan exists. File availability does not prove visual suitability; a planned missing asset is normal. Do not force the script to fit existing assets or assume SVG is always the right medium.
+
+The latest illustrated-film preference is categorized PNG assets (characters, props, reactions). Use `video/public/png/dot-manifest.json` to distinguish original generated Dot PNGs from separately regenerated assets. Exporting old SVG as PNG alone does not satisfy a request to preserve generated illustration quality. Preserve old SVG sources for prior films, but do not silently present SVG runtime artwork as the requested PNG implementation. Missing Dot outputs require locating the actual files, not relabeling locally generated art.
+
 The editable episode source owns facts and narration. Generated runtime and captions must remain consistent with it. Art-only edits retain selected voice and measured intervals. Speech edits require regenerated timing, subtitles and preview; use sentence caches when available. Do not call sentence intervals word alignment.
 
 Verify meaning, units, character/prop coherence, caption readability and timing in rendered frames and motion. Check full audio/video decoding for final voiced delivery. Keep quality checks proportional; do not add routine approval gates. Deliver source, subtitles, assets and repeat command alongside media, stating actual limitations.

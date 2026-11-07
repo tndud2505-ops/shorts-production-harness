@@ -1,0 +1,431 @@
+{
+  "version": "approved-reference-v6-arm-fix",
+  "assets": [
+    {
+      "id": "mascot/poses/neutral",
+      "label": "기본",
+      "file": "mascot/poses/neutral.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "neutral",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/thinking",
+      "label": "생각",
+      "file": "mascot/poses/thinking.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "thinking",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/explaining",
+      "label": "설명",
+      "file": "mascot/poses/explaining.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "explaining",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/surprised",
+      "label": "당황",
+      "file": "mascot/poses/surprised.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "surprised",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/typing",
+      "label": "타이핑",
+      "file": "mascot/poses/typing.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "typing",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/hope",
+      "label": "기대",
+      "file": "mascot/poses/hope.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "hope",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/disappointed",
+      "label": "실망",
+      "file": "mascot/poses/disappointed.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "disappointed",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/celebrating",
+      "label": "축하",
+      "file": "mascot/poses/celebrating.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "celebrating",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/reading",
+      "label": "독서",
+      "file": "mascot/poses/reading.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "reading",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "mascot/poses/phone",
+      "label": "휴대폰",
+      "file": "mascot/poses/phone.svg",
+      "source": "video/src/components/ReferenceMascot.tsx",
+      "props": {
+        "pose": "phone",
+        "width": 400,
+        "frame": 0
+      }
+    },
+    {
+      "id": "balloons/thought/left",
+      "label": "thought / left",
+      "file": "balloons/thought/left.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "thought",
+        "side": "left",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/thought/right",
+      "label": "thought / right",
+      "file": "balloons/thought/right.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "thought",
+        "side": "right",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/speech/left",
+      "label": "speech / left",
+      "file": "balloons/speech/left.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "speech",
+        "side": "left",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/speech/right",
+      "label": "speech / right",
+      "file": "balloons/speech/right.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "speech",
+        "side": "right",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/whisper/left",
+      "label": "whisper / left",
+      "file": "balloons/whisper/left.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "whisper",
+        "side": "left",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/whisper/right",
+      "label": "whisper / right",
+      "file": "balloons/whisper/right.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "whisper",
+        "side": "right",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/shout/left",
+      "label": "shout / left",
+      "file": "balloons/shout/left.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "shout",
+        "side": "left",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "balloons/shout/right",
+      "label": "shout / right",
+      "file": "balloons/shout/right.svg",
+      "source": "video/src/components/SvgBalloon.tsx",
+      "props": {
+        "kind": "shout",
+        "side": "right",
+        "width": 560,
+        "text": ""
+      }
+    },
+    {
+      "id": "props/automotive-car",
+      "label": "자동차",
+      "file": "props/automotive-car.svg",
+      "source": "video/src/components/AutomotiveCar.tsx",
+      "props": {
+        "width": 500,
+        "progress": 1
+      }
+    },
+    {
+      "id": "props/window",
+      "label": "사이트 창",
+      "file": "props/window.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 300,
+        "label": "",
+        "active": true
+      }
+    },
+    {
+      "id": "props/file",
+      "label": "파일",
+      "file": "props/file.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 180,
+        "label": ""
+      }
+    },
+    {
+      "id": "props/parcel",
+      "label": "상자",
+      "file": "props/parcel.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 180,
+        "label": "",
+        "active": true
+      }
+    },
+    {
+      "id": "props/server",
+      "label": "서버",
+      "file": "props/server.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 180
+      }
+    },
+    {
+      "id": "props/calendar",
+      "label": "달력",
+      "file": "props/calendar.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 180,
+        "page": 1
+      }
+    },
+    {
+      "id": "props/desk",
+      "label": "책상",
+      "file": "props/desk.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": "emoticons/sticker-1",
+      "label": "기존 스티커 1",
+      "file": "emoticons/sticker-1.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "variant": 0
+      }
+    },
+    {
+      "id": "emoticons/sticker-2",
+      "label": "기존 스티커 2",
+      "file": "emoticons/sticker-2.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "variant": 1
+      }
+    },
+    {
+      "id": "emoticons/sticker-3",
+      "label": "기존 스티커 3",
+      "file": "emoticons/sticker-3.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "variant": 2
+      }
+    },
+    {
+      "id": "symbols/arrow-right",
+      "label": "화살표",
+      "file": "symbols/arrow-right.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 85,
+        "down": false
+      }
+    },
+    {
+      "id": "symbols/arrow-down",
+      "label": "화살표",
+      "file": "symbols/arrow-down.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 85,
+        "down": true
+      }
+    },
+    {
+      "id": "charts/line-1",
+      "label": "차트 모양 1",
+      "file": "charts/line-1.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 400,
+        "variant": 0,
+        "label": ""
+      }
+    },
+    {
+      "id": "charts/line-2",
+      "label": "차트 모양 2",
+      "file": "charts/line-2.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 400,
+        "variant": 1,
+        "label": ""
+      }
+    },
+    {
+      "id": "charts/line-3",
+      "label": "차트 모양 3",
+      "file": "charts/line-3.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 400,
+        "variant": 2,
+        "label": ""
+      }
+    },
+    {
+      "id": "charts/issue-graph",
+      "label": "업무 관계 그래프",
+      "file": "charts/issue-graph.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 440,
+        "progress": 1
+      }
+    },
+    {
+      "id": "supporting/parent-1",
+      "label": "기존 부모님 보조 인물 1",
+      "file": "supporting/parent-1.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "variant": 0,
+        "puzzled": true,
+        "pointing": true
+      }
+    },
+    {
+      "id": "supporting/parent-2",
+      "label": "기존 부모님 보조 인물 2",
+      "file": "supporting/parent-2.svg",
+      "source": "video/src/components/RetrospectiveArt.tsx",
+      "props": {
+        "x": 0,
+        "y": 0,
+        "width": 200,
+        "variant": 1,
+        "puzzled": true,
+        "pointing": false
+      }
+    }
+  ]
+}

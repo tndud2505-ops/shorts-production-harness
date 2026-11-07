@@ -1,0 +1,17 @@
+Third-party attribution
+=======================
+
+The Remotion starting template was adapted from promo-video-skill, upstream
+snapshot 124414a. Its MIT copyright notice is retained in video/LICENSE:
+Copyright (c) 2026 Aariz Rasheed. Local vendor checkouts are not redistributed.
+
+Bundled font: video/public/fonts/noto/NotoSansKR.ttf
+Source: https://github.com/google/fonts/tree/main/ofl/notosanskr
+SIL Open Font License 1.1, full notice in fonts/noto/OFL.txt.
+Windows Malgun font files are not redistributed; installed system fonts may
+be used locally. Old template sound effects and placeholder app media are not
+part of the public handoff.
+
+Remotion and npm dependencies retain their respective licenses in their
+packages. Public repository access is not a license to republish third-party
+reference footage, voices or source screenshots; those media are excluded.

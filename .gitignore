@@ -1,0 +1,34 @@
+# Environments, upstream checkouts and generated outputs
+.venv*/
+models/
+vendor/
+**/node_modules/
+**/.npm-cache/
+**/.tmp/
+**/__pycache__/
+*.pyc
+*.log
+video/out/
+# Private media, credentials and generated runtimes
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.wav
+*.mp3
+*.m4a
+*.mp4
+*.mov
+*.webm
+*.zip
+voices/references/
+episodes/*/audio/
+episodes/*/references/
+episodes/*/runtime.json
+video/public/audio/
+video/public/evidence/
+video/public/fonts/draft/
+video/public/characters/reference-v5/front-reference-crop.png
+references/
+local/

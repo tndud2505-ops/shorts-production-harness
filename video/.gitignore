@@ -1,0 +1,9 @@
+node_modules/
+out/
+scripts/.vo_cache/
+.DS_Store
+.npm-cache/
+.tmp/
+public/fonts/draft/
+public/audio/
+public/episode-runtime.json

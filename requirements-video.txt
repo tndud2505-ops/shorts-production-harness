@@ -1,0 +1,2 @@
+# Optional contact sheet / final MP4 review. Main preview harness is Node.
+Pillow>=10,<13

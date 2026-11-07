@@ -1,0 +1,14 @@
+{
+  "name": "youtube-XIbUKM89IJI-reference",
+  "reference_audio": "voices/references/youtube-XIbUKM89IJI/reference.wav",
+  "reference_text": "이 회로는 전원을 끄는 순간 트랜지스터가 망가질 수 있습니다. 릴레이를 제어할 때 다이오드를 하나 더 달아주는 이유가 여기 있거든요.",
+  "source_url": "https://www.youtube.com/shorts/XIbUKM89IJI",
+  "source_title": "릴레이 옆 다이오드, 왜 달까요?",
+  "source_channel": "인사이드 임베디드",
+  "source_seconds": [
+    0,
+    7.18
+  ],
+  "transcript_source": "YouTube automatic Korean captions; not independently listened/verified",
+  "note": "User selected this new YouTube reference for local Qwen TTS experiment. Synthetic audio, no publication authorized."
+}

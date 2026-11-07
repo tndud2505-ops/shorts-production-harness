@@ -1,0 +1,979 @@
+{
+  "episode": {
+    "title": "AI로 사이트 6개를 만들고 알게 된 것",
+    "version": "full-reference-v6-handoff",
+    "status": "visual-review-pending",
+    "composition": "PurposeRetrospective",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "voice_note": "User selected new-reference, youtube-XIbUKM89IJI profile; synthetic local Qwen Base voice, not VoiceDesign.",
+    "editorial_rules": [
+      "No owned site names in narration or artwork",
+      "No provenance/helper footers or TTS/demo labels in video",
+      "AdFit evidence becomes clean drawn table; daily revenue is illustrative aggregate, not fabricated dates",
+      "Cloudflare and Google Analytics names allowed; never imply GA is perfect or all visits were bots",
+      "No fake claim that Kakao intentionally gives introductory higher rates",
+      "eCPM has one short accurate label: 광고 1,000회 노출당 단가",
+      "Restore Jira / Obsidian idea, automatic promotion, and zero downloads as three beats",
+      "Thought bubble tails must point to the thinking character head",
+      "Emoticon SVGs were free downloads intended to attract traffic and ad revenue, not paid file sales"
+    ],
+    "facts": {
+      "confirmed_balance_krw": 4591,
+      "payout_available_krw": 4590,
+      "balance_period": "사용자 설명은 약 3개월. 잔액 캡처에는 집계기간 없음",
+      "early_ecpm_krw_range": [
+        2000,
+        3000
+      ],
+      "early_ecpm_source": "사용자 회상; 원본 리포트 미확인; 일별 시계열 아님",
+      "current_ecpm_krw": [
+        261,
+        117
+      ],
+      "current_ecpm_date": "2026-11-05",
+      "current_ecpm_scope": "서로 다른 주식 분석 PC 광고단위 두 행; 사이트 전체 평균 아님",
+      "visible_rows_revenue_krw": [
+        0,
+        147,
+        36,
+        3,
+        6
+      ],
+      "visible_rows_revenue_sum_krw": 192,
+      "visible_rows_revenue_scope": "2026-11-05 캡처에 보이는 5개 행만의 합계; 전체 하루 수익은 미확인",
+      "site_pageviews": null,
+      "site_pageviews_note": "광고 요청수/렌더드 노출수/노출수를 사이트 조회수로 바꾸지 않음",
+      "subscription_krw": 1500000,
+      "subscription_months": 5,
+      "domain_krw": 60000,
+      "cost_status": "사용자 제시 대략값; 확정 영수증 미입력",
+      "server_used_months": 3,
+      "server_paid_krw": 0,
+      "server_current_status": "사용자 설명: 쿠폰 적용으로 현재 무료",
+      "server_future_monthly_usd": 40,
+      "server_coupon_end_date": null,
+      "server_note": "향후 월 요금. 과거 비용에 40달러×3개월을 더하지 않음. 서버 대수·합산 여부는 추가 단정하지 않음",
+      "jiraobsidian_downloads": 0,
+      "downloads_source": "사용자 진술; 다운로드 화면 미제공",
+      "surviving_projects": [
+        "중고 통합",
+        "주식 사이트"
+      ],
+      "website_count": 6,
+      "closed_website_count": 4,
+      "jira_app_count": 1,
+      "listed_cost_subtotal_krw": 1560000,
+      "used_pick_pivot": "Similar services existed; confidence in improving them; broad collection server costs were hard to sustain; narrowed to precollected PC listings.",
+      "kstock_origin": "Parents had trouble finding stocks with desired chart shapes; user reports this was relatively best performing.",
+      "learning": [
+        "First AWS operation",
+        "First Docker use while deploying",
+        "Consider ongoing costs and revenue model before building"
+      ],
+      "adfit_causality": "Personal early/later observations, not proof of intentional introductory pricing policy.",
+      "daily_revenue_description": "하루 몇백 원",
+      "daily_revenue_source": "사용자의 최신 운영 경험 진술; 날짜별 실측 표 아님",
+      "traffic_claim": "Cloudflare에 수천 방문으로 보이는 숫자를 봤으나 실제 사용은 적게 느껴 Google Analytics를 추가했다는 사용자 경험",
+      "traffic_exact_users": null,
+      "analytics_caveat": "집계기준이 다르며 GA도 완전한 실제 사람 수 계수기가 아님. Cloudflare 수치 전부가 봇이라고 단정하지 않음",
+      "domain_repeated_not_extra": true,
+      "closed_website_reason": "수익성이 보이지 않아 6개 중 4개 정리; 무료 SVG 이모티콘 사이트는 그중 한 예시",
+      "emoticon_business_model": "AI SVG 이모티콘 무료 배포로 방문자를 모으고 광고 수익을 계획. 생성 토큰 비용 대비 효율 부족 및 구체적 사용 목적 불명확.",
+      "current_revenue_approx_krw": 10000,
+      "current_revenue_source": "2026-11-07 사용자의 최신 약 1만원 진술. 이전 캡처 잔액4591원과 구별하며 실제 입금 여부는 단정하지 않는다.",
+      "final_subscription_net_krw": -1490000,
+      "final_net_scope": "구독비 약150만원에서 최신 누적광고수익 약1만원을 뺀 값. 도메인6만원을 제외한 구독비 기준; 전체 현금손익 아님.",
+      "emoticon_purpose_clarification": "Use cases such as KakaoTalk or printed delivery-container stickers are examples of concrete everyday uses, NOT features actually implemented. 3D model sales are a contextual comparison, not proof SVG is obsolete.",
+      "jira_learning": "User says the app began from an abstract would-be-cool idea and its practical use was not validated. Zero downloads does not establish causality."
+    },
+    "scenes": [
+      {
+        "id": "intro",
+        "title": "여섯 개 만들고, 네 개 접었다",
+        "duration_seconds": 15,
+        "narration": "저는 자동차 소프트웨어 개발자예요. 다섯 달 동안 AI로 사이트 여섯 개와 업무용 앱 하나를 만들었어요. 사이트 네 개는 수익성이 보이지 않아서 접었고요. 직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요.",
+        "tts_text": "저는 자동차 소프트웨어 개발자예요. 다섯 달 동안 에이아이로 사이트 여섯 개와 업무용 앱 하나를 만들었어요. 사이트 네 개는 수익성이 보이지 않아서 접었고요. 직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요.",
+        "caption_lines": [
+          "저는 자동차 소프트웨어 개발자예요.",
+          "다섯 달 동안 AI로 사이트 여섯 개와 업무용 앱 하나를 만들었어요.",
+          "사이트 네 개는 수익성이 보이지 않아서 접었고요.",
+          "직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요."
+        ],
+        "speech_segments": [
+          {
+            "text": "저는 자동차 소프트웨어 개발자예요.",
+            "spoken_text": "저는 자동차 소프트웨어 개발자예요."
+          },
+          {
+            "text": "다섯 달 동안 AI로 사이트 여섯 개와 업무용 앱 하나를 만들었어요.",
+            "spoken_text": "다섯 달 동안 에이아이로 사이트 여섯 개와 업무용 앱 하나를 만들었어요."
+          },
+          {
+            "text": "사이트 네 개는 수익성이 보이지 않아서 접었고요.",
+            "spoken_text": "사이트 네 개는 수익성이 보이지 않아서 접었고요."
+          },
+          {
+            "text": "직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요.",
+            "spoken_text": "직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요."
+          }
+        ]
+      },
+      {
+        "id": "emotown",
+        "title": "무료로 나누면 찾아올까?",
+        "duration_seconds": 19,
+        "narration": "정리한 사이트 중 하나는 AI로 만든 SVG 이모티콘을 무료로 나눠주는 곳이었어요. 파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠.",
+        "tts_text": "정리한 사이트 중 하나는 에이아이로 만든 에스브이지 이모티콘을 무료로 나눠주는 곳이었어요. 파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠.",
+        "caption_lines": [
+          "정리한 사이트 중 하나는 AI로 만든 SVG 이모티콘을 무료로 나눠주는 곳이었어요.",
+          "파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠."
+        ],
+        "visual_data": {},
+        "speech_segments": [
+          {
+            "text": "정리한 사이트 중 하나는 AI로 만든 SVG 이모티콘을 무료로 나눠주는 곳이었어요.",
+            "spoken_text": "정리한 사이트 중 하나는 에이아이로 만든 에스브이지 이모티콘을 무료로 나눠주는 곳이었어요."
+          },
+          {
+            "text": "파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠.",
+            "spoken_text": "파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠."
+          }
+        ]
+      },
+      {
+        "id": "emotown-purpose",
+        "title": "어디에 쓸 수 있을까?",
+        "duration_seconds": 19,
+        "narration": "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요. 무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요. 예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요. 그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠.",
+        "tts_text": "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요. 무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요. 예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요. 그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠.",
+        "caption_lines": [
+          "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요.",
+          "무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요.",
+          "예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요.",
+          "그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠."
+        ],
+        "speech_segments": [
+          {
+            "text": "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요.",
+            "spoken_text": "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요."
+          },
+          {
+            "text": "무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요.",
+            "spoken_text": "무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요."
+          },
+          {
+            "text": "예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요.",
+            "spoken_text": "예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요."
+          },
+          {
+            "text": "그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠.",
+            "spoken_text": "그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠."
+          }
+        ]
+      },
+      {
+        "id": "emotown-stop",
+        "title": "이 사이트는 여기까지",
+        "duration_seconds": 16,
+        "narration": "3D 모델도 판매되는 상황에서, 쓰임새가 불분명한 SVG 이모티콘만으로는 승산이 없겠다고 느꼈어요. 아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요. 이 사이트는 여기서 정리했습니다.",
+        "tts_text": "쓰리디 모델도 판매되는 상황에서, 쓰임새가 불분명한 에스브이지 이모티콘만으로는 승산이 없겠다고 느꼈어요. 아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요. 이 사이트는 여기서 정리했습니다.",
+        "caption_lines": [
+          "3D 모델도 판매되는 상황에서, 쓰임새가 불분명한 SVG 이모티콘만으로는 승산이 없겠다고 느꼈어요.",
+          "아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요.",
+          "이 사이트는 여기서 정리했습니다."
+        ],
+        "speech_segments": [
+          {
+            "text": "3D 모델도 판매되는 상황에서, 쓰임새가 불분명한 SVG 이모티콘만으로는 승산이 없겠다고 느꼈어요.",
+            "spoken_text": "쓰리디 모델도 판매되는 상황에서, 쓰임새가 불분명한 에스브이지 이모티콘만으로는 승산이 없겠다고 느꼈어요."
+          },
+          {
+            "text": "아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요.",
+            "spoken_text": "아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요."
+          },
+          {
+            "text": "이 사이트는 여기서 정리했습니다.",
+            "spoken_text": "이 사이트는 여기서 정리했습니다."
+          }
+        ]
+      },
+      {
+        "id": "jira",
+        "title": "멋져 보이면 쓰고 싶지 않을까?",
+        "duration_seconds": 18,
+        "narration": "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요. 이런 게 있으면 멋있겠다는 생각으로, Jira 업무들의 관계를 그래프로 보여주는 앱을 만들었죠.",
+        "visual_data": {},
+        "tts_text": "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요. 이런 게 있으면 멋있겠다는 생각으로, 지라 업무들의 관계를 그래프로 보여주는 앱을 만들었죠.",
+        "caption_lines": [
+          "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요.",
+          "이런 게 있으면 멋있겠다는 생각으로, Jira 업무들의 관계를 그래프로 보여주는 앱을 만들었죠."
+        ],
+        "speech_segments": [
+          {
+            "text": "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요.",
+            "spoken_text": "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요."
+          },
+          {
+            "text": "이런 게 있으면 멋있겠다는 생각으로, Jira 업무들의 관계를 그래프로 보여주는 앱을 만들었죠.",
+            "spoken_text": "이런 게 있으면 멋있겠다는 생각으로, 지라 업무들의 관계를 그래프로 보여주는 앱을 만들었죠."
+          }
+        ]
+      },
+      {
+        "id": "promotion",
+        "title": "알리는 일도 자동으로",
+        "duration_seconds": 10,
+        "narration": "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요.",
+        "tts_text": "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요.",
+        "caption_lines": [
+          "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요."
+        ],
+        "speech_segments": [
+          {
+            "text": "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요.",
+            "spoken_text": "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요."
+          }
+        ]
+      },
+      {
+        "id": "downloads",
+        "title": "홍보 이후의 결과",
+        "duration_seconds": 6,
+        "narration": "그 앱의 다운로드는… 영이었습니다. 돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요. 멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠.",
+        "tts_text": "그 앱의 다운로드는 영이었습니다. 돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요. 멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠.",
+        "caption_lines": [
+          "그 앱의 다운로드는… 영이었습니다.",
+          "돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요.",
+          "멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠."
+        ],
+        "speech_segments": [
+          {
+            "text": "그 앱의 다운로드는… 영이었습니다.",
+            "spoken_text": "그 앱의 다운로드는 영이었습니다."
+          },
+          {
+            "text": "돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요.",
+            "spoken_text": "돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요."
+          },
+          {
+            "text": "멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠.",
+            "spoken_text": "멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠."
+          }
+        ]
+      },
+      {
+        "id": "remaining",
+        "title": "지금 운영하는 두 사이트",
+        "duration_seconds": 5,
+        "narration": "지금 운영하는 사이트는 두 개예요. 중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요. 이쪽은 실제로 해보려는 일이 조금 더 분명했어요.",
+        "tts_text": "지금 운영하는 사이트는 두 개예요. 중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요. 이쪽은 실제로 해보려는 일이 조금 더 분명했어요.",
+        "caption_lines": [
+          "지금 운영하는 사이트는 두 개예요.",
+          "중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요.",
+          "이쪽은 실제로 해보려는 일이 조금 더 분명했어요."
+        ],
+        "speech_segments": [
+          {
+            "text": "지금 운영하는 사이트는 두 개예요.",
+            "spoken_text": "지금 운영하는 사이트는 두 개예요."
+          },
+          {
+            "text": "중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요.",
+            "spoken_text": "중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요."
+          },
+          {
+            "text": "이쪽은 실제로 해보려는 일이 조금 더 분명했어요.",
+            "spoken_text": "이쪽은 실제로 해보려는 일이 조금 더 분명했어요."
+          }
+        ]
+      },
+      {
+        "id": "used-confidence",
+        "title": "더 잘 만들 자신은 있었다",
+        "duration_seconds": 17,
+        "narration": "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요. 그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠. 여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요.",
+        "tts_text": "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요. 그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠. 여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요.",
+        "caption_lines": [
+          "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요.",
+          "그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠.",
+          "여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요."
+        ],
+        "speech_segments": [
+          {
+            "text": "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요.",
+            "spoken_text": "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요."
+          },
+          {
+            "text": "그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠.",
+            "spoken_text": "그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠."
+          },
+          {
+            "text": "여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요.",
+            "spoken_text": "여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요."
+          }
+        ]
+      },
+      {
+        "id": "used-pivot",
+        "title": "계속 운영할 수 있는 범위로",
+        "duration_seconds": 11,
+        "narration": "운영을 이어갈 수 있게 범위를 줄였어요. 컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠.",
+        "tts_text": "운영을 이어갈 수 있게 범위를 줄였어요. 컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠.",
+        "caption_lines": [
+          "운영을 이어갈 수 있게 범위를 줄였어요.",
+          "컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠."
+        ],
+        "visual_data": {},
+        "speech_segments": [
+          {
+            "text": "운영을 이어갈 수 있게 범위를 줄였어요.",
+            "spoken_text": "운영을 이어갈 수 있게 범위를 줄였어요."
+          },
+          {
+            "text": "컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠.",
+            "spoken_text": "컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠."
+          }
+        ]
+      },
+      {
+        "id": "parents",
+        "title": "이런 차트는 어디서 찾지?",
+        "duration_seconds": 15,
+        "narration": "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요. 원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠.",
+        "tts_text": "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요. 원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠.",
+        "caption_lines": [
+          "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요.",
+          "원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠."
+        ],
+        "speech_segments": [
+          {
+            "text": "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요.",
+            "spoken_text": "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요."
+          },
+          {
+            "text": "원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠.",
+            "spoken_text": "원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠."
+          }
+        ]
+      },
+      {
+        "id": "kstock",
+        "title": "직접 쓰면서 고친 사이트",
+        "duration_seconds": 10,
+        "narration": "저도 주식 공부를 하면서 사이트를 계속 고쳤어요. 제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요.",
+        "tts_text": "저도 주식 공부를 하면서 사이트를 계속 고쳤어요. 제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요.",
+        "caption_lines": [
+          "저도 주식 공부를 하면서 사이트를 계속 고쳤어요.",
+          "제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요."
+        ],
+        "visual_data": {},
+        "speech_segments": [
+          {
+            "text": "저도 주식 공부를 하면서 사이트를 계속 고쳤어요.",
+            "spoken_text": "저도 주식 공부를 하면서 사이트를 계속 고쳤어요."
+          },
+          {
+            "text": "제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요.",
+            "spoken_text": "제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요."
+          }
+        ]
+      },
+      {
+        "id": "deployment",
+        "title": "만든 다음에도 할 일이 있었다",
+        "duration_seconds": 12,
+        "narration": "이런 서비스를 직접 배포하면서 AWS 서버 운영과 Docker도 처음 경험했어요. 만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠.",
+        "tts_text": "이런 서비스를 직접 배포하면서 에이더블유에스 서버 운영과 도커도 처음 경험했어요. 만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠.",
+        "caption_lines": [
+          "이런 서비스를 직접 배포하면서 AWS 서버 운영과 Docker도 처음 경험했어요.",
+          "만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠."
+        ],
+        "speech_segments": [
+          {
+            "text": "이런 서비스를 직접 배포하면서 AWS 서버 운영과 Docker도 처음 경험했어요.",
+            "spoken_text": "이런 서비스를 직접 배포하면서 에이더블유에스 서버 운영과 도커도 처음 경험했어요."
+          },
+          {
+            "text": "만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠.",
+            "spoken_text": "만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠."
+          }
+        ]
+      },
+      {
+        "id": "traffic",
+        "title": "통계와 체감은 달랐다",
+        "duration_seconds": 22,
+        "narration": "방문자 숫자도 다시 보게 됐어요. 클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요. 구글 애널리틱스도 붙여서 함께 살펴봤어요. 도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요.",
+        "tts_text": "방문자 숫자도 다시 보게 됐어요. 클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요. 구글 애널리틱스도 붙여서 함께 살펴봤어요. 도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요.",
+        "caption_lines": [
+          "방문자 숫자도 다시 보게 됐어요.",
+          "클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요.",
+          "구글 애널리틱스도 붙여서 함께 살펴봤어요.",
+          "도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요."
+        ],
+        "speech_segments": [
+          {
+            "text": "방문자 숫자도 다시 보게 됐어요.",
+            "spoken_text": "방문자 숫자도 다시 보게 됐어요."
+          },
+          {
+            "text": "클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요.",
+            "spoken_text": "클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요."
+          },
+          {
+            "text": "구글 애널리틱스도 붙여서 함께 살펴봤어요.",
+            "spoken_text": "구글 애널리틱스도 붙여서 함께 살펴봤어요."
+          },
+          {
+            "text": "도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요.",
+            "spoken_text": "도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요."
+          }
+        ]
+      },
+      {
+        "id": "adfit",
+        "title": "광고 단가를 지켜보니",
+        "duration_seconds": 22,
+        "narration": "카카오 애드핏의 광고 단가도 지켜봤어요. 초기에 제가 봤던 eCPM은 이천에서 삼천 원 정도였어요. 최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요. 처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요.",
+        "tts_text": "카카오 애드핏의 광고 단가도 지켜봤어요. 초기에 제가 봤던 이씨피엠은 이천에서 삼천 원 정도였어요. 최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요. 처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요.",
+        "caption_lines": [
+          "카카오 애드핏의 광고 단가도 지켜봤어요.",
+          "초기에 제가 봤던 eCPM은 이천에서 삼천 원 정도였어요.",
+          "최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요.",
+          "처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요."
+        ],
+        "speech_segments": [
+          {
+            "text": "카카오 애드핏의 광고 단가도 지켜봤어요.",
+            "spoken_text": "카카오 애드핏의 광고 단가도 지켜봤어요."
+          },
+          {
+            "text": "초기에 제가 봤던 eCPM은 이천에서 삼천 원 정도였어요.",
+            "spoken_text": "초기에 제가 봤던 이씨피엠은 이천에서 삼천 원 정도였어요."
+          },
+          {
+            "text": "최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요.",
+            "spoken_text": "최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요."
+          },
+          {
+            "text": "처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요.",
+            "spoken_text": "처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요."
+          }
+        ]
+      },
+      {
+        "id": "earnings",
+        "title": "하루에 들어오는 돈",
+        "duration_seconds": 6,
+        "narration": "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요.",
+        "tts_text": "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요.",
+        "caption_lines": [
+          "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요."
+        ],
+        "speech_segments": [
+          {
+            "text": "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요.",
+            "spoken_text": "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요."
+          }
+        ]
+      },
+      {
+        "id": "balance",
+        "title": "지금까지의 광고 수익",
+        "duration_seconds": 7,
+        "narration": "지금까지 광고로 번 돈은 약 만 원 정도예요.",
+        "tts_text": "지금까지 광고로 번 돈은 약 만 원 정도예요.",
+        "caption_lines": [
+          "지금까지 광고로 번 돈은 약 만 원 정도예요."
+        ],
+        "speech_segments": [
+          {
+            "text": "지금까지 광고로 번 돈은 약 만 원 정도예요.",
+            "spoken_text": "지금까지 광고로 번 돈은 약 만 원 정도예요."
+          }
+        ]
+      },
+      {
+        "id": "cost-table",
+        "title": "운영에 들어간 비용",
+        "duration_seconds": 19,
+        "narration": "비용도 계산해봤어요. 구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요. 서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요. 쿠폰이 끝나면 월 사십 달러가 나가고요.",
+        "tts_text": "비용도 계산해봤어요. 구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요. 서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요. 쿠폰이 끝나면 월 사십 달러가 나가고요.",
+        "caption_lines": [
+          "비용도 계산해봤어요.",
+          "구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요.",
+          "서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요.",
+          "쿠폰이 끝나면 월 사십 달러가 나가고요."
+        ],
+        "speech_segments": [
+          {
+            "text": "비용도 계산해봤어요.",
+            "spoken_text": "비용도 계산해봤어요."
+          },
+          {
+            "text": "구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요.",
+            "spoken_text": "구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요."
+          },
+          {
+            "text": "서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요.",
+            "spoken_text": "서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요."
+          },
+          {
+            "text": "쿠폰이 끝나면 월 사십 달러가 나가고요.",
+            "spoken_text": "쿠폰이 끝나면 월 사십 달러가 나가고요."
+          }
+        ]
+      },
+      {
+        "id": "lessons",
+        "title": "누가, 언제 쓰게 될까?",
+        "duration_seconds": 17,
+        "narration": "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요. 누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요.",
+        "tts_text": "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요. 누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요.",
+        "caption_lines": [
+          "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요.",
+          "누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요."
+        ],
+        "speech_segments": [
+          {
+            "text": "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요.",
+            "spoken_text": "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요."
+          },
+          {
+            "text": "누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요.",
+            "spoken_text": "누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요."
+          }
+        ]
+      },
+      {
+        "id": "ending",
+        "title": "내가 계속 쓰게 되는 것부터",
+        "duration_seconds": 13,
+        "narration": "운영비와 유지비도 처음부터 함께 따져보려고 해요. 다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다.",
+        "tts_text": "운영비와 유지비도 처음부터 함께 따져보려고 해요. 다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다.",
+        "caption_lines": [
+          "운영비와 유지비도 처음부터 함께 따져보려고 해요.",
+          "다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다."
+        ],
+        "speech_segments": [
+          {
+            "text": "운영비와 유지비도 처음부터 함께 따져보려고 해요.",
+            "spoken_text": "운영비와 유지비도 처음부터 함께 따져보려고 해요."
+          },
+          {
+            "text": "다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다.",
+            "spoken_text": "다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다."
+          }
+        ]
+      }
+    ],
+    "playback_rate": 1,
+    "silent_outro": {
+      "duration_seconds": 4,
+      "amount_krw": -1490000,
+      "basis": "구독비 기준"
+    },
+    "source_episode": "ep03-purpose",
+    "timing_note": "Full story, actual measured sentence WAV durations at source speed; no 30-second limit.",
+    "character_variant": "reference"
+  },
+  "sceneRuntime": [
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.6,
+          "start": 0,
+          "text": "저는 자동차 소프트웨어 개발자예요."
+        },
+        {
+          "end": 5.32,
+          "start": 1.72,
+          "text": "다섯 달 동안 AI로 사이트 여섯 개와 업무용 앱 하나를 만들었어요."
+        },
+        {
+          "end": 7.68,
+          "start": 5.44,
+          "text": "사이트 네 개는 수익성이 보이지 않아서 접었고요."
+        },
+        {
+          "end": 11.56,
+          "start": 7.8,
+          "text": "직접 운영하면서 알게 된 점과, 실제로 얼마나 벌었는지 이야기해볼게요."
+        }
+      ],
+      "duration_seconds": 11.566666666666666,
+      "id": "intro"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 4.8,
+          "start": 0,
+          "text": "정리한 사이트 중 하나는 AI로 만든 SVG 이모티콘을 무료로 나눠주는 곳이었어요."
+        },
+        {
+          "end": 8.84,
+          "start": 4.92,
+          "text": "파일을 받으러 사람들이 찾아오면, 광고로 운영비를 마련할 수 있겠다고 생각했죠."
+        }
+      ],
+      "duration_seconds": 8.866666666666667,
+      "id": "emotown"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 3.52,
+          "start": 0,
+          "text": "막상 운영해보니, 생성에 드는 토큰 비용에 비해 효율이 낮았어요."
+        },
+        {
+          "end": 6.92,
+          "start": 3.64,
+          "text": "무엇보다, 이 파일을 사람들이 어디에 쓸지가 분명하지 않았어요."
+        },
+        {
+          "end": 10.48,
+          "start": 7.04,
+          "text": "예를 들면 카톡에서 쓰거나, 인쇄해서 배달 용기에 붙이는 것처럼요."
+        },
+        {
+          "end": 14.12,
+          "start": 10.6,
+          "text": "그런 식으로 실제 생활과 연결돼야, 사람들이 쓸 이유도 생기는 거죠."
+        }
+      ],
+      "duration_seconds": 14.133333333333333,
+      "id": "emotown-purpose"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 6.08,
+          "start": 0,
+          "text": "3D 모델도 판매되는 상황에서, 쓰임새가 불분명한 SVG 이모티콘만으로는 승산이 없겠다고 느꼈어요."
+        },
+        {
+          "end": 9,
+          "start": 6.2,
+          "text": "아이디어만으로 사람들이 찾아올 이유를 만들기는 어렵더라고요."
+        },
+        {
+          "end": 10.56,
+          "start": 9.12,
+          "text": "이 사이트는 여기서 정리했습니다."
+        }
+      ],
+      "duration_seconds": 10.566666666666666,
+      "id": "emotown-stop"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.64,
+          "start": 0,
+          "text": "업무용 앱은 옵시디언의 그래프를 보다가 떠올렸어요."
+        },
+        {
+          "end": 7.4,
+          "start": 2.76,
+          "text": "이런 게 있으면 멋있겠다는 생각으로, Jira 업무들의 관계를 그래프로 보여주는 앱을 만들었죠."
+        }
+      ],
+      "duration_seconds": 7.4,
+      "id": "jira"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 3.12,
+          "start": 0,
+          "text": "홍보 글도 자동으로 올라가게 만들어서, 꾸준히 알렸어요."
+        }
+      ],
+      "duration_seconds": 3.1333333333333333,
+      "id": "promotion"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.52,
+          "start": 0,
+          "text": "그 앱의 다운로드는… 영이었습니다."
+        },
+        {
+          "end": 6.12,
+          "start": 1.64,
+          "text": "돌아보면, 실제로 누가 어떤 일을 할 때 필요한지까지는 확인하지 못했어요."
+        },
+        {
+          "end": 10.32,
+          "start": 6.24,
+          "text": "멋있겠다는 아이디어에서 출발했지만, 사용할 이유를 충분히 검증하지는 못한 거죠."
+        }
+      ],
+      "duration_seconds": 10.333333333333334,
+      "id": "downloads"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.52,
+          "start": 0,
+          "text": "지금 운영하는 사이트는 두 개예요."
+        },
+        {
+          "end": 5,
+          "start": 1.64,
+          "text": "중고 매물을 모아보는 서비스와, 원하는 종목을 찾는 주식 사이트요."
+        },
+        {
+          "end": 7.52,
+          "start": 5.12,
+          "text": "이쪽은 실제로 해보려는 일이 조금 더 분명했어요."
+        }
+      ],
+      "duration_seconds": 7.533333333333333,
+      "id": "remaining"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.72,
+          "start": 0,
+          "text": "중고 통합 서비스는 비슷한 게 많다는 걸 알고 있었어요."
+        },
+        {
+          "end": 6.52,
+          "start": 2.84,
+          "text": "그래도 여러 곳의 매물을 모아보는 용도가 있었고, 더 잘 만들 자신도 있었죠."
+        },
+        {
+          "end": 10.08,
+          "start": 6.64,
+          "text": "여러 품목을 모아보니, 계속 운영하기에는 서버 비용 부담이 컸어요."
+        }
+      ],
+      "duration_seconds": 10.1,
+      "id": "used-confidence"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.76,
+          "start": 0,
+          "text": "운영을 이어갈 수 있게 범위를 줄였어요."
+        },
+        {
+          "end": 5.96,
+          "start": 1.88,
+          "text": "컴퓨터 매물을 미리 모아서 보여주는 방식으로 바꾸고, 서버 부담을 줄이기로 했죠."
+        }
+      ],
+      "duration_seconds": 5.966666666666667,
+      "id": "used-pivot"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.56,
+          "start": 0,
+          "text": "주식 사이트는 부모님한테 아이디어를 얻어서 만들었어요."
+        },
+        {
+          "end": 6.68,
+          "start": 2.68,
+          "text": "원하는 차트 모양의 종목을 찾기 어렵다고 하셔서, 그 과정을 편하게 만들어봤죠."
+        }
+      ],
+      "duration_seconds": 6.7,
+      "id": "parents"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.4,
+          "start": 0,
+          "text": "저도 주식 공부를 하면서 사이트를 계속 고쳤어요."
+        },
+        {
+          "end": 5.72,
+          "start": 2.52,
+          "text": "제가 만든 것 중에서는 이 사이트가 그나마 반응이 가장 좋았어요."
+        }
+      ],
+      "duration_seconds": 5.733333333333333,
+      "id": "kstock"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 4.32,
+          "start": 0,
+          "text": "이런 서비스를 직접 배포하면서 AWS 서버 운영과 Docker도 처음 경험했어요."
+        },
+        {
+          "end": 7.08,
+          "start": 4.44,
+          "text": "만드는 것뿐 아니라, 계속 돌아가게 하는 일도 배운 셈이죠."
+        }
+      ],
+      "duration_seconds": 7.1,
+      "id": "deployment"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.6,
+          "start": 0,
+          "text": "방문자 숫자도 다시 보게 됐어요."
+        },
+        {
+          "end": 7.16,
+          "start": 1.72,
+          "text": "클라우드플레어. 통계에는 몇천 명씩 찍혔는데, 실제 이용은 그만큼 많지 않게 느껴졌거든요."
+        },
+        {
+          "end": 9.52,
+          "start": 7.28,
+          "text": "구글 애널리틱스도 붙여서 함께 살펴봤어요."
+        },
+        {
+          "end": 13.24,
+          "start": 9.64,
+          "text": "도구마다 집계 기준이 달라서, 숫자를 그대로 비교하기는 어렵더라고요."
+        }
+      ],
+      "duration_seconds": 13.266666666666667,
+      "id": "traffic"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2,
+          "start": 0,
+          "text": "카카오 애드핏의 광고 단가도 지켜봤어요."
+        },
+        {
+          "end": 5.16,
+          "start": 2.12,
+          "text": "초기에 제가 봤던 eCPM은 이천에서 삼천 원 정도였어요."
+        },
+        {
+          "end": 8.64,
+          "start": 5.28,
+          "text": "최근 확인한 광고 자리 두 곳은 이백육십일 원, 백십칠 원이었고요."
+        },
+        {
+          "end": 11.88,
+          "start": 8.76,
+          "text": "처음 본 숫자만으로 앞으로의 수익을 기대하기는 어렵겠더라고요."
+        }
+      ],
+      "duration_seconds": 11.9,
+      "id": "adfit"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.8,
+          "start": 0,
+          "text": "실제로 광고 수익은 하루 몇백 원 들어오는 수준이었어요."
+        }
+      ],
+      "duration_seconds": 2.8,
+      "id": "earnings"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.32,
+          "start": 0,
+          "text": "지금까지 광고로 번 돈은 약 만 원 정도예요."
+        }
+      ],
+      "duration_seconds": 2.3333333333333335,
+      "id": "balance"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 1.04,
+          "start": 0,
+          "text": "비용도 계산해봤어요."
+        },
+        {
+          "end": 5.08,
+          "start": 1.16,
+          "text": "구독비는 다섯 달에 약 백오십만 원, 도메인은 약 육만 원이 들었어요."
+        },
+        {
+          "end": 7.76,
+          "start": 5.2,
+          "text": "서버는 석 달 썼지만 쿠폰 덕분에 아직 무료예요."
+        },
+        {
+          "end": 9.88,
+          "start": 7.88,
+          "text": "쿠폰이 끝나면 월 사십 달러가 나가고요."
+        }
+      ],
+      "duration_seconds": 9.9,
+      "id": "cost-table"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 4.4,
+          "start": 0,
+          "text": "만들어보면서 배운 것도 많았지만, 아이디어가 재밌다는 것만으로는 충분하지 않았어요."
+        },
+        {
+          "end": 9.16,
+          "start": 4.52,
+          "text": "누가 어떤 일을 할 때 쓸지, 실제 생활과 어떻게 연결될지를 더 구체적으로 생각하려고요."
+        }
+      ],
+      "duration_seconds": 9.166666666666666,
+      "id": "lessons"
+    },
+    {
+      "audioSrc": "",
+      "captions": [
+        {
+          "end": 2.4,
+          "start": 0,
+          "text": "운영비와 유지비도 처음부터 함께 따져보려고 해요."
+        },
+        {
+          "end": 5.88,
+          "start": 2.52,
+          "text": "다음에는 제가 일상에서 계속 쓰게 되는 서비스부터 만들어보겠습니다."
+        }
+      ],
+      "duration_seconds": 5.9,
+      "id": "ending"
+    }
+  ]
+}
